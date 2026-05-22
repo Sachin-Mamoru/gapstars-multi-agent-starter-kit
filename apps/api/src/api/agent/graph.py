@@ -44,7 +44,7 @@ def build_llm(provider: LLMProvider | None = None) -> BaseChatModel:
         from langchain_mistralai import ChatMistralAI
 
         return ChatMistralAI(
-            model=settings.mistral_model,
+            model_name=settings.mistral_model,
             api_key=settings.mistral_api_key,  # type: ignore[arg-type]
             streaming=True,
         )
